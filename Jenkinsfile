@@ -11,7 +11,7 @@ pipeline {
         }
         stage('Install Dependencies'){
             steps {
-                bat 'python -m pip install -r requirment.txt'
+                bat "${env.PYTHON} -m pip install -r requirment.txt"
             }
         }
         stage('Extract Data') {
