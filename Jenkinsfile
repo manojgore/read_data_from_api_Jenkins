@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    enviornment {
+    environment {
         PYTHON = "C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python313\\python.exe"
     }
     stages {
@@ -11,7 +11,7 @@ pipeline {
         }
         stage('Install Dependencies'){
             steps {
-                bat 'pip install -r requirment.txt'
+                bat 'python -m pip install -r requirment.txt'
             }
         }
         stage('Extract Data') {
